@@ -1,0 +1,56 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.contenedor_login {
+	width: 100%;
+	max-width:100%;
+	margin:auto;
+    position: relative;
+    padding-top: 80px;
+}
+
+#particles-js {
+	width: 100%;
+	height:100%;
+	position: fixed;
+	background: rgb(7,2,94);
+    background: -moz-linear-gradient(90deg, rgba(7,2,94,1) 0%, rgba(16,16,145,1) 45%, rgba(45,142,162,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(7,2,94,1) 0%, rgba(16,16,145,1) 45%, rgba(45,142,162,1) 100%);
+    background: linear-gradient(90deg, rgba(7,2,94,1) 0%, rgba(16,16,145,1) 45%, rgba(45,142,162,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#07025e",endColorstr="#2d8ea2",GradientType=1);
+}
+
+/* Principal */
+.block_log1{
+    background-color: rgba(255, 255, 255, 0.78);
+    border-radius: 15px; 
+    padding: 15px 20px 15px 20px;
+}
+.block_log2{
+    background-color: gray;
+    border-bottom-left-radius: 25px; 
+    height: auto;
+}
+.block_log1-1{
+    background-color: gray; 
+    padding: 0;
+}
+.block_log2-2{
+    background-color: white;
+    padding: 0;
+}
+.logo img{
+    display: block;
+    margin: auto;
+}
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin-bottom: 21px;
+}
