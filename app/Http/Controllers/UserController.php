@@ -31,8 +31,6 @@ class UserController extends Controller
             'password'=> bcrypt($request['password']),
         ]);
 
-        echo $request;
-
         return redirect()
             ->route('users.index')
             ->with('mensaje','Usuario creado correctamente');
@@ -51,17 +49,10 @@ class UserController extends Controller
     public function update(Request $request, User $user){
         $request->validate([
             'name' => 'required',
-            'email' => 'required',
-            'password' => 'required'
+            'email' => 'required'
         ]);
 
-        User::update([
-            'name' => $request['name'],
-            'email'=> $request['email'],
-            'password'=> bcrypt($request['password']),
-        ]);
-
-        echo $request;
+        $user->update($request->all());
 
         return redirect()
             ->route('users.index')

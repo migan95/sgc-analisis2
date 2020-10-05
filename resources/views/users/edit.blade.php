@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('title', 'Editar usuario')
 
@@ -30,9 +30,6 @@
 
         <label for="email">Correo</label>
         <input id="email" type="email" name="email" placeholder="Correo" value="{{ $user->email }}">
-
-        <label for="password">Contraseña</label>
-        <input id="password" type="password" name="password" placeholder="Contraseña" value="{{ $user->password }}">
 
         <input type="submit" value="Editar" />
 
