@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=laravel,phpstorm
 
 .idea/*
+nbproject/*
 
 ### Laravel ###
 /vendor/
@@ -136,3 +137,4 @@ fabric.properties
 .idea/codestream.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/laravel,phpstorm
+/nbproject/private/
