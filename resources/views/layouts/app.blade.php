@@ -18,6 +18,9 @@
 
 @section('sidebar')
     Menu
+    <ul>
+        <li><a href="{{ route('users.index') }}">Usuarios</a></li>
+    </ul>
 @show
 
 <div class="container">
