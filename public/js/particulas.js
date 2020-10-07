@@ -8,15 +8,15 @@ $(document).ready(function(){
         particles: {
           color: '#fff',
           shape: 'circle', // "circle", "edge" or "triangle"
-          opacity: 1,
-          size: 4,
+          opacity: 0.8,
+          size: 3,
           size_random: true,
-          nb: 150,
+          nb: 90,
           line_linked: {
             enable_auto: true,
             distance: 100,
             color: '#fff',
-            opacity: 1,
+            opacity: 0.8,
             width: 1,
             condensed_mode: {
               enable: false,
@@ -26,7 +26,7 @@ $(document).ready(function(){
           },
           anim: {
             enable: true,
-            speed: 6
+            speed: 4
           }
         },
         interactivity: {

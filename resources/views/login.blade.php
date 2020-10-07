@@ -13,37 +13,57 @@
     
     <div class="container-fluid bloque_login">
       <div class="row">
-        <div class="col-md-3"></div>
-            <div class="col-md-6">
+        <div class="col-md-2"></div>
+            <div class="col-md-5 block_log1-1">
                 <div class="block_log1">
+                <div class="logo_umg">
+                    <img src="img/logo_umg1.png" alt="" class="img-responsive">
+                </div>
+                <h1 class="titulo_login text-center">¡BIENVENIDOS! <i class="fa fa-line-chart" aria-hidden="true"></i></h1>
+                <div class="row">
+                    <div class="col-md-6 text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut neque odio sequi. Explicabo, pariatur aliquid vero.
+                    </div>
+                    <div class="col-md-6">
+                    <figure>
+                      <img src="img/login1.png" alt="" class="img-responsive img_center">
+                    </figure>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-3 block_log2-2">
+                <div class="block_log2">
                   <div class="logo">
                     <figure>
-                      <img src="img/logo-umg.png" alt="" class="img-responsive center-block">
+                      <img src="img/logo2.png" alt="" class="img-responsive center-block">
                     </figure>
                 </div>
-    <form method="POST" action="/login">
-        @csrf
-        <p>{{ $mensaje ?? '' }}</p>
-        <div class="form-group">
-            <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-user-circle"></i></div>
-                <input type="email" id="email"  name="email" class="form-control" id="" placeholder="User">
-            </div>
-            <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-lock"></i></div>
-                <input type="password" id="password" name="password" class="form-control" id="" placeholder="Password">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8"><button type="submit" class="btn btn-default">Ingresar</button></div>
-            <div class="col-md-2"></div>
-        </div>
-    </form>
+                <form method="POST" action="/login">
+                    @csrf
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-user-circle"></i></div>
+                            <input type="email" id="email"  name="email" class="form-control input_login" placeholder="User" required />
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                            <input type="password" id="password" name="password" class="form-control input_login" placeholder="Password" required />
+                        </div>
+                    </div>
+                    <p class="error_mensaje"> {{ $mensaje ?? '' }}</p>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <button type="submit" class="btn_login">Ingresar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </form>
 
     </div>
             </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
     </div>
     </div>
   
