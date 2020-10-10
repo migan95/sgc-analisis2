@@ -10,7 +10,7 @@
 @section('content')
 <div id="particles-js"></div>
 	<div class="contenedor_login">
-    
+
     <div class="container-fluid bloque_login">
       <div class="row">
         <div class="col-md-2"></div>
@@ -55,7 +55,7 @@
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
-                            <button type="submit" class="btn_login">Ingresar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                            <button type="submit" name="submit" id="submit" class="btn_login">Ingresar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                         </div>
                         <div class="col-md-1"></div>
                     </div>
@@ -66,6 +66,6 @@
         <div class="col-md-2"></div>
     </div>
     </div>
-  
+
   </div>
 @endsection
