@@ -14,21 +14,24 @@ class ClientesTable extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            
+            $table->id();
             $table->string('nombre', 100);
             $table->string('apellido', 100);
-            $table->string('id_usuario', 100);
-            $table->integer('telefono');
+            $table->string('telefono');
             $table->string('correo', 100);
             $table->string('direccion', 250);
-            $table->integer('nit');
-            
-        //
-    });
+            $table->string('nit');
+            $table->timestamps();
+        });
     }
     /**
      * Reverse the migrations.
      *
      * @return void
      */
+    public function down()
+    {
+        Schema::dropIfExists('clientes');
+    }
+
 }

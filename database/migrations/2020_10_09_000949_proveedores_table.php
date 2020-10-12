@@ -14,15 +14,19 @@ class ProveedoresTable extends Migration
     public function up()
     {
         Schema::create('proveedores', function (Blueprint $table) {
-            
-            $table->integer('id_proveedor');
+            $table->id();
             $table->string('nombre_proveedor', 100);
             $table->string('direccion_proveedor', 100);
             $table->string('num_tel_proveedor', 100);
             $table->string('correo_proveedor', 100);
-            
-       
+            $table->timestamps();
     });
 
-    }     
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('proveedores');
+    }
+
 }

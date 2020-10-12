@@ -62,6 +62,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ route('users.index') }}">Ver Usuarios</a>
                                     <a class="nav-link" href="{{ route('users.create') }}">Crear Usuarios</a>
+                                    <a class="nav-link" href="{{ route('productos.index') }}">Productos</a>
                                 </nav>
                             </div>
                     </div>

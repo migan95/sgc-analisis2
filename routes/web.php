@@ -21,7 +21,9 @@ Route::get('login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginCont
 Route::post('/login', [LoginController::class ,'authenticate']);
 Route::match(['get', 'post'], '/logout', [LoginController::class, 'logout'])->name('logout');
 Route::view('dashboard', 'dashboard');
+Route::view('ingresarProductos', 'ingresarProductos');
 
 Route::resource('users','\App\Http\Controllers\UserController')->middleware('auth');
+Route::resource('productos','\App\Http\Controllers\ProductoController')->middleware('auth');
 
 
