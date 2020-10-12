@@ -19,7 +19,6 @@ class ProveedoresTable extends Migration
             $table->string('direccion_proveedor', 100);
             $table->string('num_tel_proveedor', 100);
             $table->string('correo_proveedor', 100);
-            $table->integer('user_id');
             $table->timestamps();
     });
 
