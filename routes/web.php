@@ -23,5 +23,6 @@ Route::match(['get', 'post'], '/logout', [LoginController::class, 'logout'])->na
 Route::view('dashboard', 'dashboard');
 
 Route::resource('users','\App\Http\Controllers\UserController')->middleware('auth');
+Route::resource('productos','\App\Http\Controllers\ProductoController')->middleware('auth');
 
 

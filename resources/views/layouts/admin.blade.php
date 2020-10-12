@@ -24,6 +24,7 @@
     Menu
     <ul>
         <li><a href="{{ route('users.index') }}">Usuarios</a></li>
+        <li><a href="{{ route('productos.index') }}">Productos</a></li>
     </ul>
 @show
 
