@@ -8,32 +8,37 @@
 @endsection
 
 @section('content')
-    <h2>Usuarios</h2>
-    <p>{{ $mensaje ?? '' }}</p>
-
-    <a href="{{ route('users.create') }}">Crear</a>
-
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Acción</th>
-        </tr>
-        @foreach ($users as $user)
-            <tr>
-                <td>{{ $user->name }}</td>
-                <td>{{ $user->email }}</td>
-                <td>
-                    <form action="{{ route('users.destroy',$user->id) }}" method="POST">
-                        <a href="{{ route('users.show',$user->id) }}">Ver</a>
-                        <a href="{{ route('users.edit',$user->id) }}">Editar</a>
-
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value="Borrar">
-                    </form>
-                </td>
+<div class="container-fluid">
+    <h2 class="mt-4">Usuarios</h2>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">{{ $mensaje ?? '' }}</li>
+    </ol>
+    <table class="table table-hover">
+        <thead>
+            <tr>    
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Acción</th>
             </tr>
-        @endforeach
+        </thead>
+        <tbody>
+            @foreach ($users as $user)
+                <tr>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>
+                        <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+                            <a href="{{ route('users.show',$user->id) }}"><i class="icon_user fas fa-eye"></i></a>
+                            <a href="{{ route('users.edit',$user->id) }}"><i class="icon_user fas fa-edit"></i></a>
+
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn_eliminar_user"><i class="icon_user fas fa-trash-alt"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
+</div>
 @endsection

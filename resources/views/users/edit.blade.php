@@ -8,30 +8,41 @@
 @endsection
 
 @section('content')
-    <h2>Editar usuario</h2>
 
-    @if ($errors->any())
-        <div>
-            <p>Por favor corregir los siguientes errores:</p>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+<div class="container-fluid">
+    <h2 class="mt-4">Editar usuario: {{ $user->name }}</h2>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">
+            @if ($errors->any())
+            <div>
+                <p>Por favor corregir los siguientes errores:</p>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+        </li>
+    </ol>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <form action="{{ route('users.update', $user->id) }}" method="POST">
+            @csrf
+            @method('PUT')
+                <div class="form-group">
+                    <label for="Nombre">Nombre</label>
+                    <input  id="name" type="text" name="name" placeholder="Nombre" value="{{ $user->name }}" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="Correo">Correo</label>
+                    <input id="email" type="email" name="email" placeholder="Correo" value="{{ $user->email }}" class="form-control">
+                </div>
+                <button type="submit" value="Editar" class="btn btn-primary">Editar <i class="fas fa-edit"></i></button>
+            </form>
         </div>
-    @endif
-
-    <form action="{{ route('users.update', $user->id) }}" method="POST">
-        @csrf
-        @method('PUT')
-
-        <label for="name">Nombre</label>
-        <input id="name" type="text" name="name" placeholder="Nombre" value="{{ $user->name }}">
-
-        <label for="email">Correo</label>
-        <input id="email" type="email" name="email" placeholder="Correo" value="{{ $user->email }}">
-
-        <input type="submit" value="Editar" />
-
-    </form>
+        <div class="col-md-2"></div>
+    </div>
+</div>
 @endsection

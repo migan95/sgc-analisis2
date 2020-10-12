@@ -14,8 +14,8 @@ use \App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('dashboard');
+})->middleware('auth');
 
 Route::get('login', ['as' => 'login', 'uses' => '\App\Http\Controllers\LoginController@logged']);
 Route::post('/login', [LoginController::class ,'authenticate']);

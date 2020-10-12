@@ -1,0 +1,19 @@
+/*style modulo admin*/
+.logo img{
+    width: 100%;   
+}
+
+.icon_user{
+    margin-right: 20px;
+    color: #797979;
+}
+.icon_user:hover{
+    color: #106add;
+}
+.btn_eliminar_user{
+    background: none;
+    border: none;
+}
+.fa-trash-alt:hover{
+    color: red !important; 
+}
