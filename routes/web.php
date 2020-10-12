@@ -25,5 +25,6 @@ Route::view('ingresarProductos', 'ingresarProductos');
 
 Route::resource('users','\App\Http\Controllers\UserController')->middleware('auth');
 Route::resource('productos','\App\Http\Controllers\ProductoController')->middleware('auth');
+Route::resource('clientes','\App\Http\Controllers\ClienteController')->middleware('auth');
 
 
