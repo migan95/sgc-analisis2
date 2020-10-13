@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Producto;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -32,6 +33,15 @@ class DatabaseTest extends TestCase
         $this->assertDatabaseHas(
             'users',
             $user->toArray()
+        );
+    }
+
+    public function testDbProducto()
+    {
+        $producto = Producto::factory()->create([]);
+        $this->assertDatabaseHas(
+            'productos',
+            $producto->toArray()
         );
     }
 

@@ -26,7 +26,13 @@ class ProductoFactory extends Factory
             'descrip_producto' => $this->faker->lastName,
             'id_proveedor' => $this->faker->numerify('#'),
             'num_existencias' => $this->faker->numerify('######'),
-            'precio_productos' => $this->faker->numerify('######.##')
+            'precio_productos' => $this->faker->numerify('######.##'),
+
+            'sku' => $this->faker->numerify('#########'),
+            'precio_compra' => $this->faker->numerify('######.##'),
+            'id_categoria' => $this->faker->numerify('#'),
+            'id_marca' => $this->faker->numerify('#'),
+            'imagen' => $this->faker->url
         ];
     }
 }
