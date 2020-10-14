@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="container-fluid">
-    <h2 class="mt-4">Detalle de usuario: {{ $user->name }}</h2>
+    <h2 class="mt-4">Detalle de Usuario: {{ $user->name }}</h2>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">
         </li>

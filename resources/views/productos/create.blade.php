@@ -8,23 +8,25 @@
 @endsection
 
 @section('content')
-    <h2>Crear producto</h2>
-
-    @if ($errors->any())
-        <div>
-            <p>Por favor corregir los siguientes errores:</p>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+<div class="container-fluid">
+    <h2 class="mt-4">Crear producto</h2>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">    
+            @if ($errors->any())
+            <div>
+                <p>Por favor corregir los siguientes errores:</p>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+        </li>
+    </ol>
 
     <form action="{{ route('productos.store') }}" method="POST">
         @csrf
-
-
         <label for="nombre">Nombre</label>
         <input id="nombre" type="text" name="nombre_producto" placeholder="Nombre">
 
@@ -42,4 +44,5 @@
         <input type="submit" value="Crear" />
 
     </form>
+</div>    
 @endsection

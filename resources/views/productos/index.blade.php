@@ -10,9 +10,6 @@
 @section('content')
     <h2>Productos</h2>
     <p>{{ $mensaje ?? '' }}</p>
-
-    <a href="{{ route('productos.create') }}">Crear</a>
-
     <table>
         <tr>
             <th>Nombre</th>
