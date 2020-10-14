@@ -17,15 +17,17 @@
         <tr>
             <th>Nombre</th>
             <th>Descripcion</th>
-            <th>Existencias</th>
-            <th>Precio</th>
+            <th>Precio Compra</th>
+            <th>Precio Venta</th>
+            <th>Inventario</th>
         </tr>
         @foreach ($productos as $producto)
             <tr>
                 <td>{{ $producto->nombre_producto }}</td>
                 <td>{{ $producto->descrip_producto }}</td>
-                <td>{{ $producto->num_existencias }}</td>
+                <td>{{ $producto->precio_compra }}</td>
                 <td>{{ $producto->precio_productos }}</td>
+                <td>{{ $producto->num_existencias }}</td>
 
                 <td>
                     <form action="{{ route('productos.destroy',$producto->id) }}" method="POST">
