@@ -13,10 +13,15 @@ class Producto extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'sku',
         'nombre_producto',
         'descrip_producto',
+        'id_categoria',
+        'id_marca',
         'id_proveedor',
+        'precio_compra',
+        'precio_productos',
         'num_existencias',
-        'precio_productos'
+        'imagen'
     ];
 }
