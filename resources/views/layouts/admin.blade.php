@@ -53,6 +53,28 @@
                                 Dashboard
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapproducs" aria-expanded="false" aria-controls="collapproducs">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Productos
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapproducs" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{ route('productos.index') }}">Ver Productos</a>
+                                    <a class="nav-link" href="{{ route('productos.create') }}">Crear Productos</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapclientes" aria-expanded="false" aria-controls="collapclientes">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Clientes
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapclientes" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{ route('clientes.index') }}">Ver Clientes</a>
+                                    <a class="nav-link" href="{{ route('clientes.create') }}">Crear Clientes</a>
+                                </nav>
+                            </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Usuarios
@@ -62,7 +84,6 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ route('users.index') }}">Ver Usuarios</a>
                                     <a class="nav-link" href="{{ route('users.create') }}">Crear Usuarios</a>
-                                    <a class="nav-link" href="{{ route('productos.index') }}">Productos</a>
                                 </nav>
                             </div>
                     </div>
@@ -78,11 +99,11 @@
             <div class="container-fluid">
                 <div class="d-flex align-items-center justify-content-between small">
                     <div class="text-muted">Copyright &copy; Analisis de Sistemas II - Grupo I - 2020</div>
-                    <!--div>
+                    <div>
                         <a href="#">Privacy Policy</a>
                         &middot;
                         <a href="#">Terms &amp; Conditions</a>
-                    </div-->
+                    </div>
                 </div>
             </div>
         </footer>

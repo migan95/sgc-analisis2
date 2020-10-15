@@ -2,7 +2,6 @@
 
 @section('title', 'Crear producto')
 
-
 @section('sidebar')
     @parent
 
