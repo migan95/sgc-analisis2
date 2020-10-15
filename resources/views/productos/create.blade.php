@@ -2,14 +2,18 @@
 
 @section('title', 'Crear producto')
 
+
 @section('sidebar')
     @parent
 
 @endsection
 
 @section('content')
-    <h2>Crear producto</h2>
+    <div class="container-fluid">
+        <h2 class="mt-4">Crear producto</h2>
 
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">
     @if ($errors->any())
         <div>
             <p>Por favor corregir los siguientes errores:</p>
@@ -20,21 +24,30 @@
             </ul>
         </div>
     @endif
+            </li>
+        </ol>
 
     <form action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
-        <label for="sku">SKU</label>
-        <input id="sku" type="text" name="sku" placeholder="SKU">
 
-        <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" name="nombre_producto" placeholder="Nombre">
+        <div class="form-group">
+            <label for="SKU">SKU</label>
+            <input class="form-control" id="SKU" type="text" name="sku" placeholder="SKU">
+        </div>
 
-        <label for="desc">Descripcion</label>
-        <textarea id="desc" name="descrip_producto" placeholder="Descripcion"></textarea>
+            <div class="form-group">
+                <label for="precio_compra">Precio Compra</label>
+                <input class="form-control" id="precio_compra" type="number" name="precio_compra" placeholder="Precio_compra">
+            </div>
+
+            <div class="form-group">
+                <label for="precio_venta">Precio Venta</label>
+                <input class="form-control" id="precio_venta" type="number" name="precio_productos" placeholder="Precio_venta">
+            </div>
 
         <label for="categoria">Categoría</label>
-        <select id="categoria" name="id_categoria">
+        <select class="form-control" id="categoria" name="id_categoria">
             <option value="0">Seleccionar...</option>
             @foreach ($categorias as $categoria)
                 <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
@@ -42,7 +55,7 @@
         </select>
 
         <label for="marca">Marca</label>
-        <select id="marca" name="id_marca">
+        <select class="form-control" id="marca" name="id_marca">
             <option value="0">Seleccionar...</option>
             @foreach ($marcas as $marca)
                 <option value="{{ $marca->id }}">{{ $marca->nombre }}</option>
@@ -50,7 +63,7 @@
         </select>
 
         <label for="proveedor">Proveedor</label>
-        <select id="proveedor" name="id_proveedor">
+        <select class="form-control" id="proveedor" name="id_proveedor">
             <option value="0">Seleccionar...</option>
             @foreach ($proveedores as $proveedor)
                 <option value="{{ $proveedor->id }}">{{ $proveedor->nombre_proveedor }}</option>
@@ -58,18 +71,21 @@
         </select>
 
         <label for="precio_compra">Precio de Compra</label>
-        <input id="precio_compra" type="number" name="precio_compra" placeholder="Precio de compra">
+        <input class="form-control" id="precio_compra" type="number" name="precio_compra" placeholder="Precio de compra">
 
         <label for="precio_venta">Precio de Venta</label>
-        <input id="precio_venta" type="number" name="precio_productos" placeholder="Precio de venta">
+        <input class="form-control" id="precio_venta" type="number" name="precio_productos" placeholder="Precio de venta">
 
         <label for="existencias">Inventario</label>
-        <input id="existencias" type="number" name="num_existencias" placeholder="Existencias">
+        <input class="form-control" id="existencias" type="number" name="num_existencias" placeholder="Existencias">
+
 
         <label for="imagen">Imagen</label>
-        <input id="imagen" type="file" name="imagen">
+        <input  id="imagen" type="file" name="imagen" >
 
-        <input type="submit" value="Crear" />
-
-    </form>
+        <div>
+            <button type="submit" value="Crear" class="">Crear <i class="fas fa-check"></i></button>
+        </div>
+        </form>
+    </div>
 @endsection

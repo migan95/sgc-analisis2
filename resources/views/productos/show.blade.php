@@ -8,6 +8,7 @@
 @endsection
 
 @section('content')
+
     <h2>Detalle de producto</h2>
 
     <strong>SKU:</strong>
