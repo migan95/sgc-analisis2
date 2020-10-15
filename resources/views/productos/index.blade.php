@@ -12,6 +12,7 @@
     <p>{{ $mensaje ?? '' }}</p>
     <table>
         <tr>
+            <th>Imagen</th>
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio Compra</th>
@@ -20,6 +21,8 @@
         </tr>
         @foreach ($productos as $producto)
             <tr>
+            <td>
+    <img src="{{  asset($producto->imagen)  }}" alt="imagen"/></td>
                 <td>{{ $producto->nombre_producto }}</td>
                 <td>{{ $producto->descrip_producto }}</td>
                 <td>{{ $producto->precio_compra }}</td>

@@ -34,6 +34,7 @@
 
         <label for="password">Contraseña</label>
         <input id="password" type="password" name="password" placeholder="Contraseña">
+        <input type="hidden" value="1" name="role" />
 
         <button type="submit" value="Crear" class="">Crear <i class="fas fa-user-plus"></i></button>
 

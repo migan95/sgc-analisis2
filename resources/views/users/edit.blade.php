@@ -39,6 +39,7 @@
                     <label for="Correo">Correo</label>
                     <input id="email" type="email" name="email" placeholder="Correo" value="{{ $user->email }}" class="form-control">
                 </div>
+                <input type="hidden" value="1" name="role" />
                 <button type="submit" value="Editar" class="btn btn-primary">Editar <i class="fas fa-edit"></i></button>
             </form>
         </div>
