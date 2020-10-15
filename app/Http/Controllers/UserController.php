@@ -29,6 +29,7 @@ class UserController extends Controller
             'name' => $request['name'],
             'email'=> $request['email'],
             'password'=> bcrypt($request['password']),
+            'role' => $request['role']
         ]);
 
         return redirect()
@@ -49,7 +50,8 @@ class UserController extends Controller
     public function update(Request $request, User $user){
         $request->validate([
             'name' => 'required',
-            'email' => 'required'
+            'email' => 'required',
+            'role' => 'required'
         ]);
 
         $user->update($request->all());

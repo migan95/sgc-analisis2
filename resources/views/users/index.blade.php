@@ -15,9 +15,10 @@
     </ol>
     <table class="table table-hover">
         <thead>
-            <tr>    
+            <tr>
                 <th>Nombre</th>
                 <th>Correo</th>
+                <th>Rol</th>
                 <th>Acción</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                 <tr>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
+                    <td>{{ $user->role == 1 ? 'Administrador' : ($user->role == 2 ? 'Supervisor' : 'Cajero') }}</td>
                     <td>
                         <form action="{{ route('users.destroy',$user->id) }}" method="POST">
                             <a href="{{ route('users.show',$user->id) }}"><i class="icon_user fas fa-eye"></i></a>

@@ -14,24 +14,26 @@
         <li class="breadcrumb-item active">
         </li>
     </ol>
-    <div class="row">  
+    <div class="row">
         <div class="col-md-6">
             <table class="table table-hover">
                 <thead>
-                    <tr>    
+                    <tr>
                         <th>Nombre</th>
                         <th>Correo</th>
+                        <th>Rol</th>
                     </tr>
                 </thead>
                 <tbody>
                         <tr>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
+                            <td>{{ $user->role == 1 ? 'Administrador' : ($user->role == 2 ? 'Supervisor' : 'Cajero') }}</td>
                         </tr>
                 </tbody>
             </table>
         </div>
         <div class="col-md-6"></div>
-    </div> 
-</div>    
+    </div>
+</div>
 @endsection
