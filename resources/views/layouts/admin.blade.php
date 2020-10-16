@@ -64,6 +64,7 @@
                                     <a class="nav-link" href="{{ route('productos.create') }}">Crear Productos</a>
                                 </nav>
                             </div>
+                            @if (\Illuminate\Support\Facades\Auth::user()->role === 1 or \Illuminate\Support\Facades\Auth::user()->role === 2)
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapclientes" aria-expanded="false" aria-controls="collapclientes">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Clientes
@@ -75,17 +76,20 @@
                                     <a class="nav-link" href="{{ route('clientes.create') }}">Crear Clientes</a>
                                 </nav>
                             </div>
+                            @endif
+                            @if (\Illuminate\Support\Facades\Auth::user()->role === 1)
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Usuarios
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{ route('users.index') }}">Ver Usuarios</a>
-                                    <a class="nav-link" href="{{ route('users.create') }}">Crear Usuarios</a>
-                                </nav>
-                            </div>
+                                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="{{ route('users.index') }}">Ver Usuarios</a>
+                                        <a class="nav-link" href="{{ route('users.create') }}">Crear Usuarios</a>
+                                    </nav>
+                                </div>
+                            @endif
                     </div>
                 </nav>
             </div>
