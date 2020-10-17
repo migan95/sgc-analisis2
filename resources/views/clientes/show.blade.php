@@ -8,23 +8,40 @@
 @endsection
 
 @section('content')
-    <h2>Detalle de cliente</h2>
+    <div class="container-fluid">
 
-    <strong>Nombre:</strong>
-    <span>{{ $cliente->nombre }}</span>
+        <h2 class="mt-4">Detalle de Clientes</h2>
 
-    <strong>Apellido:</strong>
-    <span>{{ $cliente->apellido }}</span>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">
+            </li>
+        </ol>
 
-    <strong>Telefono:</strong>
-    <span>{{ $cliente->telefono }}</span>
-
-    <strong>Correo:</strong>
-    <span>{{ $cliente->correo }}</span>
-
-    <strong>Direccion:</strong>
-    <span>{{ $cliente->direccion }}</span>
-
-    <strong>Nit:</strong>
-    <span>{{ $cliente->nit }}</span>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Nombre:</th>
+                        <th>Apellido:</th>
+                        <th>Telefono:</th>
+                        <th>Correo:</th>
+                        <th>Direccion:</th>
+                        <th>Nit:</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ $cliente->nombre }}</td>
+                        <td>{{ $cliente->apellido }}</td>
+                        <td>{{ $cliente->telefono }}</td>
+                        <td>{{ $cliente->correo }}</td>
+                        <td>{{ $cliente->direccion }}</td>
+                        <td>{{ $cliente->nit }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 @endsection
