@@ -11,7 +11,7 @@ class LoginController extends Controller
 
     public function logged(Request $request){
         if(Auth::check()){
-            return redirect()->intended('dashboard');
+            return redirect()->intended('productos');
         }else{
             return view('login');
         }
@@ -22,7 +22,7 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
         $mensaje = 'Credenciales incorrectas';
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard');
+            return redirect()->intended('productos');
         }else{
             return view('login',['mensaje' => 'Credenciales incorrectas']);
         }

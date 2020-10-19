@@ -10,4 +10,9 @@ class Marca extends Model
     use HasFactory;
 
     protected $table = 'marcas';
+    public $timestamps = false;
+
+    protected $fillable = [
+        'nombre'
+    ];
 }

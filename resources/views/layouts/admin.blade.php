@@ -47,17 +47,21 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
+                            <!--
                             <div class="sb-sidenav-menu-heading">Home</div>
                             <a class="nav-link" href="/">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
+                            -->
                             <div class="sb-sidenav-menu-heading">Interface</div>
+                            @if (\Illuminate\Support\Facades\Auth::user()->role === 1 or \Illuminate\Support\Facades\Auth::user()->role === 2)
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapproducs" aria-expanded="false" aria-controls="collapproducs">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Productos
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
+                            @endif
                             <div class="collapse" id="collapproducs" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ route('productos.index') }}">Ver Productos</a>
@@ -87,6 +91,34 @@
                                     <nav class="sb-sidenav-menu-nested nav">
                                         <a class="nav-link" href="{{ route('users.index') }}">Ver Usuarios</a>
                                         <a class="nav-link" href="{{ route('users.create') }}">Crear Usuarios</a>
+                                    </nav>
+                                </div>
+                            @endif
+
+                            @if (\Illuminate\Support\Facades\Auth::user()->role === 1 or \Illuminate\Support\Facades\Auth::user()->role === 2)
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapcategorias" aria-expanded="false" aria-controls="collapcategorias">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    Categorias
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="collapcategorias" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="{{ route('categorias.index') }}">Ver Categorias</a>
+                                        <a class="nav-link" href="{{ route('categorias.create') }}">Crear Categoria</a>
+                                    </nav>
+                                </div>
+                            @endif
+
+                            @if (\Illuminate\Support\Facades\Auth::user()->role === 1 or \Illuminate\Support\Facades\Auth::user()->role === 2)
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapmarcas" aria-expanded="false" aria-controls="collapmarcas">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    Marcas
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="collapmarcas" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="{{ route('marcas.index') }}">Ver Marcas</a>
+                                        <a class="nav-link" href="{{ route('marcas.create') }}">Crear Marca</a>
                                     </nav>
                                 </div>
                             @endif
