@@ -36,7 +36,7 @@
                 <div class="block_log2">
                   <div class="logo">
                     <figure>
-                      <img src="img/LogoNuevo2.png" alt="" class="img-responsive center-block">
+                      <img src="img/LogoNuevo2.png" alt="" width="85%" height="50%" class="img-responsive center-block">
                     </figure>
                 </div>
                 <form method="POST" action="/login">
