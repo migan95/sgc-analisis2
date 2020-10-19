@@ -22,7 +22,7 @@
                 <h1 class="titulo_login text-center">¡BIENVENIDOS! <i class="fa fa-line-chart" aria-hidden="true"></i></h1>
                 <div class="row">
                     <div class="col-md-6 text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ut neque odio sequi. Explicabo, pariatur aliquid vero.
+                        <h3>Bienvenido al sistema de gestión comercial. <br><br> Por favor, ingrese con su usuario para administrar/usar el sistema.</h3>
                     </div>
                     <div class="col-md-6">
                     <figure>
@@ -36,7 +36,7 @@
                 <div class="block_log2">
                   <div class="logo">
                     <figure>
-                      <img src="img/logo2.png" alt="" class="img-responsive center-block">
+                      <img src="img/LogoNuevo2.png" alt="" class="img-responsive center-block">
                     </figure>
                 </div>
                 <form method="POST" action="/login">
