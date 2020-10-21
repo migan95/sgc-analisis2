@@ -9,11 +9,22 @@
 
 @section('content')
 <div class="container-fluid">
-    <h2 class="mt-4">Detalle de Usuario: {{ $user->name }}</h2>
+    <h2 class="mt-4">Detalle de Usuario</h2>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">
         </li>
     </ol>
+    <div class="card-header">
+    <div class="row">
+                <div class="col-md-5">
+                    <h4><button type="button" class="btn btn-outline-info" onclick="history.go(-1);"><i class="fas fa-arrow-circle-left"></i> </button> {{ $user->name }}</h4>
+                </div>
+                <div class="col-md-7 text-right">
+                    <a href="{{ route('users.edit',$user->id) }}" class="btn btn-outline-success" >Editar <i class="fas fa-edit"></i></a> 
+                </div>
+            </div>
+            </div>
+
     <div class="row">
         <div class="col-md-6">
             <table class="table table-hover">

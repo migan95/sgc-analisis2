@@ -25,9 +25,8 @@
         </li>
     </ol>
     <div class="card mb-4">
-    <div class="card-header">
-        <i class="fas fa-table mr-1"></i>
-            Crear producto Sistema de Gestion de Inventarios.
+    <div class="card-header"> 
+        <h5><button type="button" class="btn btn-outline-info" onclick="history.go(-1);"><i class="fas fa-arrow-circle-left"></i> </button> Crear producto - Sistema de Gestion de Inventarios.</h5>
     </div>
     <div class="card-body">   
         <form action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
