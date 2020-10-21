@@ -56,7 +56,13 @@
                                 <td class="txt-product">{{ $producto->num_existencias }}</td>
                                 <td class="txt-product">Q {{ $producto->precio_compra }}.00</td>
                                 <td class="txt-product">Q {{ $producto->precio_productos }}.00</td>
-                                <td>{{ $producto->id_categoria }}</td>
+                                <td class="txt-product">
+                                    @foreach ($categorias as $categoria)
+                                        @if($producto->id_categoria == $categoria->id)
+                                            {{ $categoria->nombre }}
+                                        @endif
+                                    @endforeach
+                                </td>
                                 <td class="txt-product"><a href="{{ route('productos.show',$producto->id) }}"><i class="icon_pro fas fa-eye"></i></a> </td>
                                 <td class="txt-product"><a href="{{ route('productos.edit',$producto->id) }}"><i class="icon_pro fas fa-edit"></i></a> </td>
                                 <td colspan="2" class="txt-product">
@@ -92,6 +98,6 @@
     </div>
     </div>
 
-    
+
     @endforeach
 @endsection

@@ -21,8 +21,10 @@ class ProductoController extends Controller
     public function index()
     {
         $productos = Producto::all();
+        $categorias = Categoria::all();
         return view('productos.index')
-            ->with('productos', $productos);
+            ->with('productos', $productos)
+            ->with('categorias', $categorias);
     }
 
     /**
