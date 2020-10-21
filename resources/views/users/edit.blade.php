@@ -10,7 +10,7 @@
 @section('content')
 
 <div class="container-fluid">
-    <h2 class="mt-4">Editar usuario: {{ $user->name }}</h2>
+    <h2 class="mt-4">Editar usuario</h2>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">
             @if ($errors->any())
@@ -25,6 +25,15 @@
             @endif
         </li>
     </ol>
+    <div class="card-header">
+            <div class="row">
+                <div class="col-md-5">
+                    <h4><button type="button" class="btn btn-outline-info" onclick="history.go(-1);"><i class="fas fa-arrow-circle-left"></i> </button> Usuario: {{ $user->name }}</h4>
+                </div>
+                <div class="col-md-7 text-right">
+                </div>
+            </div>
+    </div>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">

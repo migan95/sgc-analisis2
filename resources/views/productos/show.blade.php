@@ -17,7 +17,14 @@
     </ol>
     <div class="card mb-4">
         <div class="card-header">
-            <h4>{{ $producto->nombre_producto }}</h4>
+            <div class="row">
+                <div class="col-md-5">
+                    <h4><button type="button" class="btn btn-outline-info" onclick="history.go(-1);"><i class="fas fa-arrow-circle-left"></i> </button> {{ $producto->nombre_producto }}</h4>
+                </div>
+                <div class="col-md-7 text-right">
+                    <a href="{{ route('productos.edit',$producto->id) }}" class="btn btn-outline-success" >Editar <i class="fas fa-edit"></i></a> 
+                </div>
+            </div>
         </div>
         <div class="card-body">
             <div class="row">
@@ -39,10 +46,6 @@
                             <h6 class="card-subtitle mb-2 text-muted">{{ $proveedor }}</h6>
                             <h6 class="card-title">Descripcion</h6>
                             <p class="card-subtitle mb-2 text-muted">{{ $producto->descrip_producto }}</p>
-                            <div style="margin-top:20px;">
-                                <a href="{{ route('productos.index') }}" class="card-link">Regresar Productos</a>
-                                <a href="{{ route('productos.edit',$producto->id) }}" class="card-link">Editar</a>
-                            </div>
                         </div>
                     </div>
                 </div>

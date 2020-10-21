@@ -15,10 +15,17 @@
             {{ $mensaje ?? '' }}
         </li>
     </ol>
-    <div class="card mb-4">
+<div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table mr-1"></i>
-            Listado de productos
+            <div class="row">
+                <div class="col-md-5">
+                    <i class="fas fa-table mr-1"></i>
+                    Listado de productos
+                </div>
+                <div class="col-md-7 text-right">
+                    <a href="{{ route('productos.create') }}" class="btn btn-outline-success" >Crear Nuevo <i class="fas fa-plus"></i></a> 
+                </div>
+            </div>
     </div>
         <div class="card-body">
             <div class="table-responsive">

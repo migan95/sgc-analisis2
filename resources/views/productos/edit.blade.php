@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="container-fluid">
-    <h2 class="mt-4">Editar producto: {{ $producto->nombre_producto }}</h2>
+    <h2 class="mt-4">Editar producto</h2>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">
             @if ($errors->any())
@@ -26,8 +26,13 @@
     </ol>
     <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table mr-1"></i>
-            Editar producto Sistema de Gestion de Inventarios.
+            <div class="row">
+                <div class="col-md-5">
+                    <h4><button type="button" class="btn btn-outline-info" onclick="history.go(-1);"><i class="fas fa-arrow-circle-left"></i> </button> {{ $producto->nombre_producto }}</h4>
+                </div>
+                <div class="col-md-7 text-right">
+                </div>
+            </div>
     </div>
     <div class="card-body">   
         <form action="{{ route('productos.update', $producto->id) }}" method="POST" enctype="multipart/form-data">
@@ -110,7 +115,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="reset" value="cancelar" class="btn_reset_product">Borrar Cambios <i class="fas fa-history"></i></button>
+                            <button type="reset" value="cancelar" class="btn_reset_product">Revertir Cambios <i class="fas fa-history"></i></button>
                         </div>
                         <div class="col-md-6">
                             <button type="submit" value="Crear" class="btn_crear_product">Editar <i class="fas fa-check"></i></button>

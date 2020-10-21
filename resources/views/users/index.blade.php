@@ -13,6 +13,18 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">{{ $mensaje ?? '' }}</li>
     </ol>
+    <div class="card-header">
+            <div class="row">
+                <div class="col-md-5">
+                    <i class="fas fa-table mr-1"></i>
+                    Listado de Usuarios
+                </div>
+                <div class="col-md-7 text-right">
+                    <a href="{{ route('users.create') }}" class="btn btn-outline-success" >Crear Nuevo <i class="fas fa-plus"></i></a> 
+                </div>
+            </div>
+    </div>
+    <div class="card-body">
     <table class="table table-hover">
         <thead>
             <tr>
@@ -42,5 +54,6 @@
             @endforeach
         </tbody>
     </table>
+    </div>
 </div>
 @endsection
