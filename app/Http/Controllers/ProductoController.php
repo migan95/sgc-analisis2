@@ -9,6 +9,7 @@ use App\Models\Proveedor;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ProductoController extends Controller
@@ -192,5 +193,18 @@ class ProductoController extends Controller
         $producto->update([
             'imagen' => str_replace('public', 'storage', $imagen)
         ]);
+    }
+
+    public function busqueda(Request $request) {
+        $data = $request->validate([
+            '_token' => 'required',
+            'busqueda' => 'required'
+        ]);
+        $busqueda = $data['busqueda'];
+        $productos = DB::table('productos')
+            ->where('nombre_producto','LIKE','%'.$busqueda.'%')
+            ->get();
+        return response()->json(array('response'=> $productos), 200);
+
     }
 }

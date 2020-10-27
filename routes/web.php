@@ -36,3 +36,8 @@ Route::resource('clientes','\App\Http\Controllers\ClienteController')
     ->middleware('role:2');
 Route::view('buscadorProductos', 'productos.buscadorProductos');
 
+Route::get('buscadorProductos', function () {
+    return view('productos.buscadorProductos');
+});
+Route::post('buscadorProductos', '\App\Http\Controllers\ProductoController@busqueda');
+

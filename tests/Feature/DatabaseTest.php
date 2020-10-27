@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Categoria;
+use App\Models\Cotizaciones;
 use App\Models\Marca;
 use App\Models\Producto;
 use App\Models\Proveedor;
@@ -71,6 +72,15 @@ class DatabaseTest extends TestCase
         $item = Proveedor::factory()->create([]);
         $this->assertDatabaseHas(
             'proveedores',
+            $item->toArray()
+        );
+    }
+
+    public function testDbCotizacion()
+    {
+        $item = Cotizaciones::factory()->create([]);
+        $this->assertDatabaseHas(
+            'cotizaciones',
             $item->toArray()
         );
     }

@@ -15,11 +15,13 @@ class CreateCotizacionesTable extends Migration
     {
         Schema::create('cotizaciones', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('id_cliente');
+            $table->foreign('id_cliente')->references('id')->on('clientes');
             $table->unsignedBigInteger('id_producto');
             $table->foreign('id_producto')->references('id')->on('productos');
             $table->unsignedBigInteger('cantidad');
+            $table->float("precio_unitario");
+            $table->timestamps();
         });
     }
 
