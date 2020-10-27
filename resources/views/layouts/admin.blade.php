@@ -61,6 +61,14 @@
                                 Productos
                             </a>
                             @endif
+
+                            @if (\Illuminate\Support\Facades\Auth::user()->role === 1 or \Illuminate\Support\Facades\Auth::user()->role === 2)
+                                <a class="nav-link" href="{{ route('productos.buscadorProductos') }}">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-globe"></i></div>
+                                    Buscar Productos
+                                </a>
+                            @endif
+
                             @if (\Illuminate\Support\Facades\Auth::user()->role === 1 or \Illuminate\Support\Facades\Auth::user()->role === 2)
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapclientes" aria-expanded="false" aria-controls="collapclientes">
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
@@ -109,8 +117,10 @@
                                 </div>
                             @endif
                     </div>
+                    </div>
                 </nav>
             </div>
+
 @show
 
     <div id="layoutSidenav_content">

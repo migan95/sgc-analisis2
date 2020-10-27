@@ -23,6 +23,7 @@ Route::match(['get', 'post'], '/logout', [LoginController::class, 'logout'])->na
 Route::view('dashboard', '/');
 Route::view('ingresarProductos', 'ingresarProductos');
 
+
 Route::resource('users','\App\Http\Controllers\UserController')
     ->middleware('role:1');
 Route::resource('productos','\App\Http\Controllers\ProductoController')
@@ -33,5 +34,5 @@ Route::resource('marcas','\App\Http\Controllers\MarcaController')
     ->middleware('role:2');
 Route::resource('clientes','\App\Http\Controllers\ClienteController')
     ->middleware('role:2');
-
+Route::view('buscadorProductos', 'productos.buscadorProductos');
 
