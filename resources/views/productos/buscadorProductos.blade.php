@@ -21,7 +21,7 @@
             <thead>
             <tr>
 
-{{--                <th scope="col">SKU:</th>--}}
+                <th scope="col">SKU:</th>
                 <th scope="col">Nombre:</th>
                 <th scope="col">Descripcion:</th>
                 <th scope="col">Existencias:</th>
@@ -57,6 +57,7 @@
                     $.each( data, function( key, items ) {
                         $.each( items, function( k, item ) {
                             var fila = "<tr>" +
+                                "<td class='txt-product'>" + item.sku + "</th>" +
                                 "<td class='txt-product'>" + item.nombre_producto + "</th>" +
                                 "<td class='txt-product'>" + item.descrip_producto + "</th>" +
                                 "<td class='txt-product'>" + item.num_existencias + "</th>" +
@@ -67,7 +68,6 @@
                         });
                     });
                     $('tbody').html(contenido);
-
                 }
             });
         }

@@ -196,15 +196,14 @@ class ProductoController extends Controller
     }
 
     public function busqueda(Request $request) {
-        $data = $request->validate([
-            '_token' => 'required',
-            'busqueda' => 'required'
-        ]);
-        $busqueda = $data['busqueda'];
-        $productos = DB::table('productos')
-            ->where('nombre_producto','LIKE','%'.$busqueda.'%')
-            ->get();
+        $busqueda = $request['busqueda'];
+        if(empty($busqueda)){
+            $productos = null;
+        }else{
+            $productos = DB::table('productos')
+                ->where('nombre_producto','LIKE','%'.$busqueda.'%')
+                ->get();
+        }
         return response()->json(array('response'=> $productos), 200);
-
     }
 }
