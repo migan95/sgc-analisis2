@@ -25,7 +25,7 @@
                 <th scope="col">Nombre:</th>
                 <th scope="col">Descripcion:</th>
                 <th scope="col">Existencias:</th>
-                <th scope="col">Precio compra:</th>
+{{--                <th scope="col">Precio compra:</th>--}}
                 <th scope="col">Precio Venta:</th>
 {{--                <th scope="col">Categoria:</th>--}}
 {{--                <th scope="col">Marca:</th>--}}
@@ -61,7 +61,7 @@
                                 "<td class='txt-product'>" + item.nombre_producto + "</th>" +
                                 "<td class='txt-product'>" + item.descrip_producto + "</th>" +
                                 "<td class='txt-product'>" + item.num_existencias + "</th>" +
-                                "<td class='txt-product'>" + item.precio_compra + "</th>" +
+                                // "<td class='txt-product'>" + item.precio_compra + "</th>" +
                                 "<td class='txt-product'>" + item.precio_productos + "</th>" +
                                 "</tr>";
                             contenido = contenido + fila;

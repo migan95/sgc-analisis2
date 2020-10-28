@@ -25,10 +25,10 @@
         </li>
     </ol>
     <div class="card mb-4">
-    <div class="card-header"> 
+    <div class="card-header">
         <h5><button type="button" class="btn btn-outline-info" onclick="history.go(-1);"><i class="fas fa-arrow-circle-left"></i> </button> Crear producto - Sistema de Gestion de Inventarios.</h5>
     </div>
-    <div class="card-body">   
+    <div class="card-body">
         <form action="{{ route('productos.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                         <label for="existencias">Inventario</label>
-                        <input class="form-control" id="existencias" type="number" name="num_existencias" placeholder="Inventario" value="">            
+                        <input class="form-control" id="existencias" type="number" name="num_existencias" placeholder="Inventario" value="">
                     </div>
                     <div class="form-group">
                         <label for="categoria">Categoría</label>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Agregar Imagen</label>
-                        <input type="file" class="form-control-file" id="imagen" name="imagen">
+                        <input type="file" class="form-control-file" id="imagen" name="imagen" accept=".jpg, .png, .git, .jpeg, .bmp, .tif, .tiff|image/*">
                     </div>
                     <div class="row">
                         <div class="col-md-4"></div>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-md-1"></div>
             </div>
-        </form> 
-    </div>      
+        </form>
+    </div>
 </div>
 @endsection
