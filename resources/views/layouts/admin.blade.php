@@ -16,8 +16,8 @@
 @section('header')
     @if (\Illuminate\Support\Facades\Auth::check())
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Sistema Inventario</a>
-            <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+        <button class="btn btn-link btn-sm order-2 order-lg-0" id="sidebarToggle" style="margin-left: 10px" href="#"><i class="fas fa-bars"></i></button>
+        <a class="navbar-brand" href="#">Sistema Inventario</a>
             <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
             </div>
             <ul class="navbar-nav ml-auto ml-md-0">
