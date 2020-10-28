@@ -17,10 +17,10 @@
                    onkeyup="getProductos()">
         </div>
 
-        <table class="table">
+        <table class="table table-hover  table-sm" id="dataTable_Products">
             <thead>
             <tr>
-
+            
                 <th scope="col">SKU:</th>
                 <th scope="col">Nombre:</th>
                 <th scope="col">Descripcion:</th>

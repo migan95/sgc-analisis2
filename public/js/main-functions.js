@@ -1,6 +1,10 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
-    $('#dataTable_Products').DataTable();
+
+    $('#dataTable_Products').dataTable( {
+      "searching": false
+    } );
+
 //cargar image
 
   $(function() {
