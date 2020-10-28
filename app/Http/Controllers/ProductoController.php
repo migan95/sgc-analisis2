@@ -202,6 +202,7 @@ class ProductoController extends Controller
         }else{
             $productos = DB::table('productos')
                 ->where('nombre_producto','LIKE','%'.$busqueda.'%')
+                ->orWhere('sku','LIKE','%'.$busqueda.'%')
                 ->get();
         }
         return response()->json(array('response'=> $productos), 200);
